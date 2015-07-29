@@ -1,0 +1,56 @@
+
+
+.appEsempio{
+  .EXTENDER();
+
+
+
+
+
+  /*
+  TUTTE LE RISOLUZIONI
+  */
+
+
+  .wrapper_appEsempio{
+    .COLS(); /* .wrapper_appEsempio è un contenitore di colonne quindi .COLS() per i .CELL() interveniamo sulla width */
+
+
+    .controller_appEsempio{
+      .CELL();
+      width: 200px;
+      background-color: #222;
+    }
+
+    .content_appEsempio{
+      .CELL-FLEX();
+      background-color: #ffff00;
+    }
+  }
+
+
+
+  /*
+  SU MOBILE
+  */
+
+
+
+  @media @onlyScreen and @mobile{
+    .wrapper_appEsempio{
+      .ROWS(); /* .wrapper_appEsempio su mobile invece diventa un contenitore di righe quindi ROWS per i .CELL() interveniamo sulla height */
+
+
+      .controller_appEsempio{
+        .CELL();
+        height: 50px;
+      }
+
+      .content_appEsempio{
+        .CELL-FLEX();
+      }
+    }
+  }
+
+
+}
